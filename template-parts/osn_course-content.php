@@ -16,22 +16,22 @@
                 <div class="entry-header-wrapper">
                     <header class="entry-header">
                         <?php
-                        get_template_part('template-parts/osn_host_r-content-title')
+                        get_template_part('template-parts/osn_course-content-title')
                         ?>
                         <span><?php
-                            $start_date = get_field('retreat-event-start-time');
-                            $end_date = get_field('retreat-event-end-time');
+                            $start_date = get_field('course-start-time');
+                            $end_date = get_field('course-end-time');
 
                             echo "$start_date - $end_date"
                             ?></span>
                     </header><!-- .entry-header -->
                 </div><!-- .entry-header-wrapper -->
 
-                <?php the_field('retreat-event-description'); ?>
-                <h3>Retreat Locations: </h3>
+                <?php the_field('course-description'); ?>
+                <h3>Course Locations: </h3>
 
                 <?php
-                $retreat_locations = get_field('retreat-event-retreat-locations');
+                $retreat_locations = get_field('course-locations');
                 if ($retreat_locations) { ?>
                     <ul>
                         <?php
@@ -49,7 +49,7 @@
 
                 <h3>Teachers: </h3>
                 <?php
-                $teachers = get_field('retreat-event-hosting-teachers');
+                $teachers = get_field('course-hosting-teachers');
                 if ($teachers) { ?>
                     <ul>
                         <?php

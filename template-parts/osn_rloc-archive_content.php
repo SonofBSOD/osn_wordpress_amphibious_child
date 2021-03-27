@@ -1,14 +1,6 @@
-<?php
-/**
- * The default template for displaying content
- *
- * @package Amphibious-Child
- */
-?>
-
 <div class="post-wrapper-hentry">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <div class="post-content-wrapper post-content-wrapper-archive" style="overflow: hidden">
+        <div class="post-content-wrapper post-content-wrapper-archive">
 
             <?php amphibious_post_thumbnail(); ?>
 
@@ -23,7 +15,7 @@
                     <?php
                     $image = get_field('retreat-location-image');
                     if (!empty($image)) { ?>
-                        <img style="float: left; width: 350px; height: 350px; margin-right: 25px; margin-bottom: 35px; border: 1px solid black" src="<?php echo(esc_url($image['url'])) ?>" alt="">
+                        <img style="float: left; max-width: 120px; max-height: 120px; margin-right: 25px; margin-bottom: 35px; border:1px solid black" src="<?php echo(esc_url($image['url'])) ?>" alt="">
                     <?php }
                     ?>
                     <div>
@@ -34,29 +26,12 @@
                     </div>
                 </div>
 
-                <?php the_field('retreat-location-description'); ?>
+                <?php echo wp_trim_words(get_field('retreat-location-description'), 40, '...'); ?>
 
-                <h3 style="margin-top: 10px">Hosting Retreats: </h3>
                 <?php
-                $retreat_events = get_posts(array(
-                    'post_type' => HOSTED_RETREAT_POST_TYPE,
-                    meta_query_args(get_the_ID(), 'retreat-event-retreat-locations')
-                ));
-
-                if ($retreat_events) { ?>
-                    <ul>
-                        <?php
-                        foreach ($retreat_events as $retreat_event) {
-                            $permalink = get_permalink($retreat_event->ID);
-                            $retreat_event_title = get_the_title($retreat_event->ID);
-                            ?>
-
-                            <li><a href="<?php echo $permalink ?>"><?php echo $retreat_event_title ?></a></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                <?php }
+                if ( amphibious_has_read_more_label() ) {
+                    amphibious_read_more_link();
+                }
                 ?>
             </div><!-- .entry-data-wrapper -->
 

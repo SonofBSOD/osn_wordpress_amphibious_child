@@ -18,9 +18,9 @@ get_header(); ?>
                         <?php /* Start the Loop */ ?>
                         <?php while ( have_posts() ) : the_post(); ?>
 
-                            <?php get_template_part( 'template-parts/osn_teacher-content', 'single' ); ?>
+                            <?php get_template_part( 'template-parts/osn_course-content', 'single' ); ?>
 
-                            <?php // amphibious_the_post_pagination(); ?>
+                            <?php amphibious_the_post_pagination(); ?>
 
                         <?php endwhile; // end of the loop. ?>
                     </div><!-- .post-wrapper -->

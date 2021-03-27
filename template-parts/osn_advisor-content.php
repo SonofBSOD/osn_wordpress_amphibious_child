@@ -16,11 +16,11 @@
                 <div class="entry-header-wrapper">
                     <header class="entry-header">
                         <?php
-                            $email = get_field('teacher-email');
-                            $website = get_field('teacher-website');
-                            echo(
-                                 sprintf( '<h2 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h2>', esc_url( get_permalink() ), get_field('teacher-first-name') . " " . get_field('teacher-last-name'))
-                            );
+                        $email = get_field('advisor-email');
+                        $website = get_field('advisor-website');
+                        echo(
+                        sprintf( '<h2 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h2>', esc_url( get_permalink() ), get_field('advisor-first-name') . " " . get_field('advisor-last-name'))
+                        );
                         ?>
                         <span>Email: <?php echo (empty($email) ? 'None': $email) ?> | Website: <?php echo (empty($website) ? 'None': sprintf('<a href="%1$s">%2$s</a>', $website, $website)) ?></span>
                     </header><!-- .entry-header -->
@@ -28,12 +28,12 @@
 
                 <div>
                     <?php
-                    $image = get_field('teacher-portrait');
+                    $image = get_field('advisor-portrait');
                     if (!empty($image)) { ?>
                         <img style="object-fit: cover; float: left; width: 350px; height: 350px; margin-right: 25px; margin-bottom: 35px; border: 1px solid black" src="<?php echo(esc_url($image['url'])) ?>" alt="">
                     <?php }
                     ?>
-                    <?php the_field('teacher-bio'); ?>
+                    <?php the_field('advisor-bio'); ?>
                 </div>
             </div><!-- .entry-data-wrapper -->
 

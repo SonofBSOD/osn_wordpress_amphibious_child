@@ -5,3 +5,25 @@
  Template:     amphibious
  Version:      1.0.0
 */
+
+@media (min-width: 992px) {
+    #menu-1 > li > a {
+        pointer-events: none;
+    }
+}
+
+.entry-header-wrapper {
+    /* display: none; */
+}
+
+.hidden-header-wrapper {
+    display: none;
+}
+
+.hidden-entry-header-wrapper {
+    display: none;
+}
+
+.blurb-post-wrapper {
+    margin-bottom: 30px;
+}
