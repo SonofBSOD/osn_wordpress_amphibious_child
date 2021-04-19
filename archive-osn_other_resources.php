@@ -10,24 +10,16 @@
 get_header(); ?>
 
 <?php
-$blurb = <<<DOC
-Courses are a great way to delve into a specific facet of the Dharma in a structured way with the guidance of a teacher and the support of peers. The emphasis on any course we offer directly or share from the offerings of our Dharma peers will always be on how the aspect of the Dharma being explored can impact the student’s life and lead to away from suffering and towards flourishing.
-All courses are offered on a purely <a href="/dana">dana</a> basis.
-<br/><br/>
-Please ensure that you have read our page on <a href="/dana">dana</a> and watched the short video on the subject provided and thus understand the opportunity and responsibility this traditional structuring of student - teacher interaction allows for and invites.
-DOC;
-
-$footer = <<<DOC
-Teachers are invited either by the trustees or by an individual advisor.  The trustees & advisors in turn have the ability to challenge each others’ selections.  They also have the ability to revisit and challenge historic selections.
-DOC;
-
-?>
+get_template_part('template-parts/image-banner', null, array(
+    'image_url' => get_stylesheet_directory_uri() . '/images/other-resources.jpg',
+    'text' => 'Other Resources'
+))?>
 
 <?php
-get_template_part('template-parts/image-banner', null, array(
-    'image_url' => get_stylesheet_directory_uri() . '/images/dana.jpeg',
-    'text' => 'Courses'
-))?>
+$blurb = <<<DOC
+The below is a list of organisations, websites and resources that we believe may be of interest to our community.
+DOC;
+?>
 
 <div class="page-header-wrapper hidden-header-wrapper">
     <div class="container">
@@ -35,7 +27,7 @@ get_template_part('template-parts/image-banner', null, array(
         <div class="row">
             <div class="col">
 
-                <header class="page-header">
+                <header class="page-header hidden-page-header">
                     <?php
                     if ( have_posts() ) :
                         the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -58,10 +50,9 @@ get_template_part('template-parts/image-banner', null, array(
 
             <div id="primary" class="content-area <?php amphibious_layout_class( 'content' ); ?>">
                 <main id="main" class="site-main">
-
                     <div class="post-wrapper post-wrapper-archive blurb-post-wrapper">
                         <?php get_template_part('template-parts/generic-post-wrapper-square', null, array(
-                            'articleId' => 'course-event-blurb',
+                            'articleId' => 'advisor-event-blurb',
                             'text' => $blurb
                         )); ?>
                     </div>
@@ -72,19 +63,11 @@ get_template_part('template-parts/image-banner', null, array(
                             <?php while ( have_posts() ) : the_post(); ?>
 
                                 <?php
-                                /* Include the Post-Format-specific template for the content.
-                                 * If you want to override this in a child theme, then include a file
-                                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                                 */
-                                get_template_part( 'template-parts/osn_course-archive_content');
+                                // for now, advisors really display
+                                get_template_part( 'template-parts/osn_other_resources-archive_content');
                                 ?>
 
                             <?php endwhile; ?>
-
-                            <?php get_template_part('template-parts/generic-post-wrapper-square', null, array(
-                                'articleId' => 'course-event-footer',
-                                'text' => $footer
-                            )); ?>
                         </div><!-- .post-wrapper -->
 
                         <?php amphibious_the_posts_pagination(); ?>

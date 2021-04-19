@@ -18,7 +18,8 @@ get_template_part('template-parts/image-banner', null, array(
 <?php
 $blurb = <<<DOC
 Within traditional Buddhist contexts, the student teacher relationship is considered foundational to the teachings and practices of the Buddhadharma taking root in the life of a practitioner. We believe strongly that this direct transmission is a vital part of the learning journey that greatly aids the very real possibility of living from the insight of practice. As such, one of the main services we are privileged to offer is connecting students to teachers for individual instruction and mentoring. 
-<br/> <br/>All the below teachers are available for mentoring on an individual and <a href="/dana">dana</a> basis. Please introduce yourself to them through the email address provided within their individual entry below with some background information about your life and practice.
+<br/> <br/>All the below teachers are available for mentoring on an individual and <a href="/dana">dana</a> basis. Please ensure that you have read our page on <a href="/dana">dana</a> and watched the short video on the subject provided and thus understand the opportunity and responsibility this traditional structuring of student - teacher interaction allows for and invites.
+<br/> <br/>Please introduce yourself to them through the contact link provided within their individual entry below with some background information about your life and practice and await their response.
 DOC;
 
 $footer = <<<DOC
@@ -74,7 +75,10 @@ DOC;
                                  * If you want to override this in a child theme, then include a file
                                  * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                                  */
-                                get_template_part( 'template-parts/osn_teacher-archive_content');
+
+                                if (get_field('teacher-available-for-individual-instruction')) {
+                                    get_template_part('template-parts/osn_teacher-archive_content');
+                                }
                                 ?>
 
                             <?php endwhile; ?>

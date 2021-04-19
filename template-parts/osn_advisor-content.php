@@ -22,7 +22,7 @@
                         sprintf( '<h2 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h2>', esc_url( get_permalink() ), get_field('advisor-first-name') . " " . get_field('advisor-last-name'))
                         );
                         ?>
-                        <span>Email: <?php echo (empty($email) ? 'None': $email) ?> | Website: <?php echo (empty($website) ? 'None': sprintf('<a href="%1$s">%2$s</a>', $website, $website)) ?></span>
+                        <span>Email: <?php echo (empty($email) ? 'None': antispambot($email)) ?> | Website: <?php echo (empty($website) ? 'None': sprintf('<a href="%1$s">%2$s</a>', $website, $website)) ?></span>
                     </header><!-- .entry-header -->
                 </div><!-- .entry-header-wrapper -->
 

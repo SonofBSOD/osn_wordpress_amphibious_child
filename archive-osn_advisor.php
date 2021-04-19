@@ -74,10 +74,6 @@ DOC;
 
                             <?php endwhile; ?>
 
-                            <?php get_template_part('template-parts/generic-post-wrapper-square', null, array(
-                                'articleId' => 'advisor-event-footer',
-                                'text' => $footer
-                            )); ?>
                         </div><!-- .post-wrapper -->
 
                         <?php amphibious_the_posts_pagination(); ?>
