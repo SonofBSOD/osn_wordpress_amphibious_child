@@ -28,25 +28,16 @@
                 </div><!-- .entry-header-wrapper -->
 
                 <?php the_field('retreat-event-description'); ?>
-                <h3>Retreat Locations: </h3>
-
                 <?php
-                $retreat_locations = get_field('retreat-event-retreat-locations');
-                if ($retreat_locations) { ?>
-                    <ul>
-                        <?php
-                        foreach ($retreat_locations as $location) {
-                            $permalink = get_permalink($location->ID);
-                            $title = get_the_title($location->ID); ?>
-
-                            <li><a href="<?php echo $permalink ?>"><?php echo $title ?></a></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                <?php }
+                    $enroll_url = get_field('retreat-event-external-enroll-link');
+                    if ($enroll_url) {
                 ?>
-
+                    <div class="more-link-wrapper" style="margin: 0.9375rem 0 0.9375rem">
+                        <a href="<?php echo $enroll_url ?>" class="more-link" style="font-size: 1.5rem">Click here to enroll</a>
+                    </div>
+                <?php
+                    }
+                ?>
                 <h3>Teachers: </h3>
                 <?php
                 $teachers = get_field('retreat-event-hosting-teachers');

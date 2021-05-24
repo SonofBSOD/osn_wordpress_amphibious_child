@@ -10,16 +10,33 @@
                         <?php
                         get_template_part('template-parts/osn_host_r-content-title')
                         ?>
-                        <span><?php
-                            $start_date = get_field('retreat-event-start-time');
-                            $end_date = get_field('retreat-event-end-time');
+                        <span>
+                            <?php
+                                $freeform_date = get_field('retreat-event-freeform-date');
+                                $start_date = get_field('retreat-event-start-time');
+                                $end_date = get_field('retreat-event-end-time');
 
-                            echo "$start_date - $end_date"
-                            ?></span>
+                                if (!empty($freeform_date)) {
+                                    echo "$freeform_date";
+                                } else {
+                                    echo "$start_date - $end_date";
+                                }
+                            ?>
+                        </span>
                     </header><!-- .entry-header -->
                 </div><!-- .entry-header-wrapper -->
 
-                <?php echo wp_trim_words(get_field('retreat-event-description'), 40, '...'); ?>
+                <div class="entry-summary" style="overflow: hidden">
+                    <?php
+                    $image = get_field('retreat-event-image-thumbnail');
+                    if (!empty($image)) {
+                        ?>
+                        <img class="archive-entry-image" src="<?php echo(esc_url($image['url'])) ?>" alt="">
+                        <?php
+                    }
+                    ?>
+                    <?php echo wp_trim_words(get_field('retreat-event-description'), 40, '...'); ?>
+                </div>
 
                 <?php
                 if ( amphibious_has_read_more_label() ) {

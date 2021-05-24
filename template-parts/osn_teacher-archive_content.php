@@ -15,7 +15,7 @@
                     <?php
                     $image = get_field('teacher-portrait');
                     if (!empty($image)) { ?>
-                        <img style="float: left; max-width: 120px; max-height: 120px; margin-right: 25px; margin-bottom: 35px; border:1px solid black" src="<?php echo(esc_url($image['url'])) ?>" alt="">
+                        <img class="archive-entry-image" src="<?php echo(esc_url($image['url'])) ?>" alt="">
                     <?php }
                     ?>
                     <?php echo wp_trim_words(get_field('teacher-bio'), 40, '...'); ?>

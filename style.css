@@ -27,3 +27,20 @@
 .blurb-post-wrapper {
     margin-bottom: 30px;
 }
+
+.archive-entry-image {
+    float: left;
+    max-width: 120px;
+    max-height: 120px;
+    margin-right: 25px;
+    margin-bottom: 35px;
+    border:1px solid black;
+}
+
+.footer-link {
+    color: #666666 !important
+}
+
+.footer-link:hover {
+    color: white !important
+}

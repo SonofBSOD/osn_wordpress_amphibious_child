@@ -16,35 +16,34 @@
                 <div class="entry-header-wrapper">
                     <header class="entry-header">
                         <?php
-                        get_template_part('template-parts/osn_course-content-title')
+                            get_template_part('template-parts/osn_course-content-title')
                         ?>
-                        <span><?php
+                        <span>
+                            <?php
+                            $freeform_date = get_field('course-freeform-date');
                             $start_date = get_field('course-start-time');
                             $end_date = get_field('course-end-time');
 
-                            echo "$start_date - $end_date"
-                            ?></span>
+                            if (!empty($freeform_date)) {
+                                echo "$freeform_date";
+                            } else {
+                                echo "$start_date - $end_date";
+                            }
+                            ?>
+                        </span>
                     </header><!-- .entry-header -->
                 </div><!-- .entry-header-wrapper -->
 
                 <?php the_field('course-description'); ?>
-                <h3>Course Locations: </h3>
-
                 <?php
-                $retreat_locations = get_field('course-locations');
-                if ($retreat_locations) { ?>
-                    <ul>
-                        <?php
-                        foreach ($retreat_locations as $location) {
-                            $permalink = get_permalink($location->ID);
-                            $title = get_the_title($location->ID); ?>
-
-                            <li><a href="<?php echo $permalink ?>"><?php echo $title ?></a></li>
-                            <?php
-                        }
-                        ?>
-                    </ul>
-                <?php }
+                    $enroll_url = get_field('course-external-enroll-link');
+                    if ($enroll_url) {
+                ?>
+                        <div class="more-link-wrapper" style="margin: 0.9375rem 0 0.9375rem">
+                            <a href="<?php echo $enroll_url ?>" class="more-link" style="font-size: 1.5rem">Click here to enroll</a>
+                        </div>
+                <?php
+                    }
                 ?>
 
                 <h3>Teachers: </h3>

@@ -8,23 +8,40 @@
                 <div class="entry-header-wrapper">
                     <header class="entry-header">
                         <?php
-                        get_template_part('template-parts/osn_host_r-content-title')
+                            get_template_part('template-parts/osn_host_r-content-title')
                         ?>
-                        <span><?php
-                            $start_date = get_field('course-start-time');
-                            $end_date = get_field('course-end-time');
+                        <span>
+                            <?php
+                                $freeform_date = get_field('course-freeform-date');
+                                $start_date = get_field('course-start-time');
+                                $end_date = get_field('course-end-time');
 
-                            echo "$start_date - $end_date"
-                            ?></span>
+                                if (!empty($freeform_date)) {
+                                    echo "$freeform_date";
+                                } else {
+                                    echo "$start_date - $end_date";
+                                }
+                            ?>
+                        </span>
                     </header><!-- .entry-header -->
                 </div><!-- .entry-header-wrapper -->
 
-                <?php echo wp_trim_words(get_field('course-description'), 40, '...'); ?>
+                <div class="entry-summary" style="overflow: hidden">
+                    <?php
+                        $image = get_field('course-image-thumbnail');
+                        if (!empty($image)) {
+                    ?>
+                            <img class="archive-entry-image" src="<?php echo(esc_url($image['url'])) ?>" alt="">
+                    <?php
+                        }
+                    ?>
+                    <?php echo wp_trim_words(get_field('course-description'), 40, '...'); ?>
+                </div>
 
                 <?php
-                if ( amphibious_has_read_more_label() ) {
-                    amphibious_read_more_link();
-                }
+                    if ( amphibious_has_read_more_label() ) {
+                        amphibious_read_more_link();
+                    }
                 ?>
             </div><!-- .entry-data-wrapper -->
 

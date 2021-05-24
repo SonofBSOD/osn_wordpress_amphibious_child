@@ -11,9 +11,9 @@ get_header(); ?>
 
 <?php
     $blurb = <<<DOC
-Retreats, whether online or in-person, offer a potent opportunity to embed, develop or immerse in practice. This allows the transformational contemplative practices within the Buddhist traditions to really take root in our being and flourish in the midst of our daily lives.
+Retreats offer a potent opportunity to learn, develop and immerse in practice. This allows the transformational contemplative practices within the Buddhist traditions to really take root in our being.
 <br/><br/>
-However, many retreats offered are prohibitively expensive: a significant barrier to the Dharma. We are committed to helping teachers run <a href="/dana">dana</a> based retreats where room and board costs will be covered by us as part of our charitable expenditure. As such, any retreat offered through Open Sangha Collective will be on a purely dana basis.  
+However, many retreats offered are prohibitively expensive: a significant barrier to the Dharma. We are committed to supporting retreats that are run on a fully <a href="/dana">dana</a> basis both in terms of teaching and room and board. This support takes the form of sharing retreats offered on this basis by our friends in a variety of sanghas and issuing retreat grants to teachers and working with them to run <a href="/dana">dana</a> only retreats.  
 
 DOC;
 
