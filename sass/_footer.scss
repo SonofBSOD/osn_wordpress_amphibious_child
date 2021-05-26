@@ -1,0 +1,74 @@
+@use "./variables" as *;
+
+.site-footer {
+	overflow: hidden;
+}
+
+.footer-news-row {
+	background-color: $dark;
+	padding: 1rem;
+}
+
+.footer-news-col {
+	margin: 1rem auto;
+	max-width: max-content;
+	width: 100%;
+}
+
+.news-header {
+	color: $light;
+}
+
+.news-submit-input {
+	width: 100%;
+	color: $light;
+	background-image: -webkit-linear-gradient(top, $primary, #158FBF);
+	border: none;
+}
+
+.news-submit-input:hover {
+	color: $primary;
+	font-weight: 600;
+	background-image: -webkit-linear-gradient(top, $light, #f4f4f4);
+	border: none;
+}
+
+.footer-info-row {
+	justify-content: space-between;
+	align-items: center;
+	padding: .5rem;
+	font-size: .85rem;
+	color: var(--dark);
+	background-color: $light;
+}
+
+.footer-divider {
+	padding: 0 5px; 
+}
+
+.charity-col {
+	max-width: max-content;
+	width: 100%;
+}
+
+.credit-col {
+	display: flex;
+	justify-content: center;
+	max-width: max-content;
+	width: 100%;
+}
+
+.link-col {
+	display: flex;
+	justify-content: flex-end;
+	max-width: max-content;
+	width: 100%;
+}
+
+.footer-link {
+    color: $dark !important
+}
+
+.footer-link:hover {
+    color: rgba($dark,.7) !important
+}

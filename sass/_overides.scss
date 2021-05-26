@@ -1,0 +1,27 @@
+@media (min-width: 992px) {
+    #menu-1 > li > a {
+        pointer-events: none;
+    }
+}
+
+.hidden-header-wrapper {
+    display: none;
+}
+
+.hidden-entry-header-wrapper {
+    display: none;
+}
+
+.blurb-post-wrapper {
+    margin-bottom: 30px;
+}
+
+.archive-entry-image {
+    float: left;
+    max-width: 120px;
+    max-height: 120px;
+    margin-right: 25px;
+    margin-bottom: 35px;
+    border:1px solid black;
+}
+
