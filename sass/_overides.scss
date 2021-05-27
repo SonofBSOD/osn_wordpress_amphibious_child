@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @media (min-width: 992px) {
     #menu-1 > li > a {
         pointer-events: none;
@@ -25,3 +27,8 @@
     border:1px solid black;
 }
 
+.btn-grey {
+    margin: 0 .25rem;
+    border: 1px solid rgb(151, 151, 151);
+    font-weight: 600;
+}
