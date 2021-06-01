@@ -28,12 +28,19 @@
 .modal {
   width: 750px;
   max-width: 100%;
+  height: 90%;
   margin: 1rem;
   padding: 1.5rem;
 
   border-radius: 5px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.modal-inner {
+  overflow-y: auto;
+  height: 95%;
 }
 
 .modal-initial {
@@ -49,6 +56,7 @@
   }
 }
 
-.close-contact-modal {
-  float: right;
+.close-contact-modal-container {
+  height: 5%;
+  margin-bottom: 1rem;
 }

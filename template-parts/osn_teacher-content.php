@@ -51,91 +51,93 @@
         $teacher_lastname = get_field('teacher-last-name');
     ?>
     <div class="modal">
-        <button class="close-contact-modal" id="close-contact-modal">Close</button>
-        <div class="modal-initial" id="modal-initial">
+        <div class="close-contact-modal-container">    
+          <button id="close-contact-modal">Close</button>
+        </div>
+        <div class="modal-inner modal-initial" id="modal-initial">
             <h2>Student Guidelines</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia debitis soluta molestias eaque modi veniam iure doloremque officia. Nesciunt mollitia asperiores explicabo dicta cumque?</p>
+            <p>Adapted from the Student Guidelines from the <a href="https://www.spiritual-integrity.org/guidelines/" target="_blank" rel="noopener noreferrer">Association for Spiritual Integrity</a></p>
             <ul>
-                <li>Make peace</li>
-                <li>Be kind</li>
-                <li>Be gentle</li>
+                <li>Students are invited to understand that teachers and students alike are human and therefore always subject to growth, both personally and professionally. Growth has no end; it is a characteristic of our humanity.</li>
+                <li>Students and teachers should have open channels of communication so that misunderstandings and miscommunication can be worked out. If and when ethical grievances arise between a student and teacher or within the community, great care should be taken to ensure open and clear communication, so that all parties learn, grow, heal and evolve in a mature manner.</li>
+                <li>If major ethical violations of abuse have occurred, boundaries must be set and the appropriate administrative or legal actions should be implemented so that such abuse does not continue. Ethical grievances are not taboo topics and can and should be openly discussed in a way which is appropriate and healing.</li>
+                <li>Students are encouraged to develop an awareness and responsibility for any projections, in particular projecting god-like or celebrity status onto their teacher. Students should also develop an awareness and responsibility to not project their personal pain onto a teacher, or friends, and family.</li>
+                <li>Students will not make sexual advances towards or flirt with a teacher.</li>
             </ul>
             
-            <div id="contact">
-                <div class="form-container">
-                    <h2>Request personal instruction</h2>
-                    <iframe
-                    name="hidden_iframe"
-                    id="hidden_iframe"
-                    style="display: none"
-                    ></iframe>
-                    <form
-                    action="https://docs.google.com/forms/d/e/1FAIpQLSfmncp3ceQwzH4SLYPoXtbrBgCyvygm2oAPC7tPsDY23feYLg/formResponse"
-                    method="post"
-                    target="hidden_iframe"
-                    onsubmit="validateForm()"
-                    id="my-form"
-                    >
-                    <div class="mb-3 form-check">
-                        <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="guidelines"
-                        name="entry.1495443192"
-                        />
-                        <label class="form-check-label" for="guidelines">
-                        I have read and agree to the Open Sangha Collective's student
-                        guidelines
-                        </label>
-                    </div>
-                    <div class="mb-3">
-                        <input
+            <div class="contact-form-container">
+                <h2>Request personal instruction</h2>
+                <iframe
+                name="hidden_iframe"
+                id="hidden_iframe"
+                style="display: none"
+                ></iframe>
+                <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLSctB0aA1paitYqrBD136yq8WF1NTYg6qtl4a_gRzY7oIWj6Cw/formResponse"
+                method="post"
+                target="hidden_iframe"
+                onsubmit="validateForm()"
+                id="my-form"
+                >
+                <div class="mb-3 form-check">
+                    <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="guidelines"
+                    name="entry.1828477880"
+                    />
+                    <label class="form-check-label" for="guidelines">
+                    I have read and agree to the Open Sangha Collective's student
+                    guidelines
+                    </label>
+                </div>
+                <div class="mb-3">
+                    <input
+                    type="text"
+                    class="form-control"
+                    id="teacher"
+                    name="entry.1756842035"
+                    value="<?php echo trim("$teacher_firstname") . " " .trim("$teacher_lastname") ?>"
+                    aria-label="<?php echo "$teacher_firstname $teacher_lastname" ?>"
+                    readonly
+                    />
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                    <input
                         type="text"
                         class="form-control"
-                        id="teacher"
-                        name="entry.1118404719"
-                        value="<?php echo trim("$teacher_firstname") . " " .trim("$teacher_lastname") ?>"
-                        aria-label="<?php echo "$teacher_firstname $teacher_lastname" ?>"
-                        readonly
-                        />
+                        id="name"
+                        name="entry.817157306"
+                        placeholder="Enter your name"
+                        aria-label="Name"
+                    />
                     </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="name"
-                            name="entry.1102057729"
-                            placeholder="Enter your name"
-                            aria-label="Name"
-                        />
-                        </div>
-                        <div class="col">
-                        <input
-                            type="email"
-                            class="form-control"
-                            placeholder="Enter your email"
-                            id="email"
-                            name="entry.1217221383"
-                            aria-label="Email"
-                        />
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <textarea
+                    <div class="col">
+                    <input
+                        type="email"
                         class="form-control"
-                        placeholder="Enter your message to the teacher here."
-                        id="message"
-                        name="entry.198974391"
-                        rows="4"
-                        ></textarea>
+                        placeholder="Enter your email"
+                        id="email"
+                        name="entry.1343967089"
+                        aria-label="Email"
+                    />
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
                 </div>
+                <div class="mb-3">
+                    <textarea
+                    class="form-control"
+                    placeholder="Enter your message to the teacher here."
+                    id="message"
+                    name="entry.1776406539"
+                    rows="4"
+                    ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
-        <div class="modal-success hide" id="modal-success">
+        <div class="modal-inner modal-success hide" id="modal-success">
             <h2>Thank you!</h2>
             <p>Your request for instruction has been forwarded to <?php echo "$teacher_firstname $teacher_lastname" ?>. We've sent you an email with information about the next steps in making contact.</p>
         </div>
