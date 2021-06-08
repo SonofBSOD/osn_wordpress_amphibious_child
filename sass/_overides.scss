@@ -1,0 +1,67 @@
+@use "./variables" as *;
+
+@media (min-width: 992px) {
+  #menu-1 > li > a {
+    pointer-events: none;
+  }
+}
+
+.hidden-header-wrapper {
+  display: none;
+}
+
+.hidden-entry-header-wrapper {
+  display: none;
+}
+
+.blurb-post-wrapper {
+  margin-bottom: 30px;
+}
+
+.archive-entry-image {
+  float: left;
+  max-width: 120px;
+  max-height: 120px;
+  margin-right: 25px;
+  margin-bottom: 35px;
+  border: 1px solid black;
+}
+
+.btn-primary {
+  margin: 0 0.25rem;
+  color: white;
+  background-image: -webkit-linear-gradient(top, $primary, #158fbf);
+  font-weight: 600;
+}
+
+.btn-grey {
+  margin: 0 0.25rem;
+  border: 1px solid rgb(151, 151, 151);
+  font-weight: 600;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.link-btn-grey {
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  color: #5f6368;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: normal;
+  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+
+  &:hover {
+    color: $primary;
+  }
+}

@@ -32,6 +32,6 @@ get_header(); ?>
 
         </div><!-- .row -->
     </div><!-- .container -->
-</div><!-- .site-content-inside -->
+  </div><!-- .site-content-inside -->
 
 <?php get_footer(); ?>
