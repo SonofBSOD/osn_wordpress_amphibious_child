@@ -17,7 +17,7 @@ get_template_part('template-parts/image-banner', null, array(
 
 <?php
 $blurb = <<<DOC
-The below are a group of teachers who have each been living and teaching the Dharma for many decades and therefore form a bridge between emerging students and teachers and the generations of practitioners who have passed on the Dharma since the time of the Buddha. We have asked, and will continue to ask, for their encouragement, support and advice as we develop as an organisation.
+The below are a group of teachers who have each been living and teaching the Dharma for many years and therefore form a bridge between emerging students and teachers and the generations of practitioners who have passed on the Dharma since the time of the Buddha. We have asked, and will continue to ask, for their encouragement, support and advice as we develop as an organisation.
 DOC;
 
 $footer = <<<DOC
