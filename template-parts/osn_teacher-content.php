@@ -58,10 +58,10 @@
             <h2>Student Guidelines</h2>
             <p>Adapted from the Student Guidelines from the <a href="https://www.spiritual-integrity.org/guidelines/" target="_blank" rel="noopener noreferrer">Association for Spiritual Integrity</a></p>
             <ul>
-                <li>Students are invited to understand that teachers and students alike are human and therefore always subject to growth, both personally and professionally. Growth has no end; it is a characteristic of our humanity.</li>
-                <li>Students and teachers should have open channels of communication so that misunderstandings and miscommunication can be worked out. If and when ethical grievances arise between a student and teacher or within the community, great care should be taken to ensure open and clear communication, so that all parties learn, grow, heal and evolve in a mature manner.</li>
-                <li>If major ethical violations of abuse have occurred, boundaries must be set and the appropriate administrative or legal actions should be implemented so that such abuse does not continue. Ethical grievances are not taboo topics and can and should be openly discussed in a way which is appropriate and healing.</li>
-                <li>Students are encouraged to develop an awareness and responsibility for any projections, in particular projecting god-like or celebrity status onto their teacher. Students should also develop an awareness and responsibility to not project their personal pain onto a teacher, or friends, and family.</li>
+                <li>Students should understand that teachers and students alike are human and therefore always subject to growth, both personally and professionally.</li>
+                <li>Students are encouraged to develop an awareness and responsibility for any projections, in particular projecting god-like or celebrity status onto their teacher. Students should also develop an awareness and responsibility to not project their personal pain onto a teacher.</li>
+                <li>Students and teachers should have open channels of communication so that misunderstandings and miscommunication can be worked out.</li>
+                <li>If ethical violations of any kind have occurred, please reach out to us using the form on our <a href="https://opensanghacollective.org/give-feedback/">feedback</a> page. Ethical grievances are not taboo topics and can and should be openly discussed.</li>
                 <li>Students will not make sexual advances towards or flirt with a teacher.</li>
             </ul>
             
