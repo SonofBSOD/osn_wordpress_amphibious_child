@@ -3,6 +3,7 @@
 .header-btn-group {
   display: flex;
   justify-content: center;
+  margin: 0.25rem 0 0.75rem 0;
 }
 
 .modal-container {
@@ -20,7 +21,7 @@
 
   background-color: rgb(0, 0, 0, 0.6);
 
-  &.show {
+  &.modal-show {
     display: flex;
   }
 }
@@ -35,28 +36,65 @@
   border-radius: 5px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
 }
 
 .modal-inner {
-  overflow-y: auto;
+  overflow-x: hidden;
   height: 95%;
+
+  padding-right: 1.25rem;
+  padding-bottom: 1rem;
 }
 
 .modal-initial {
-  &.hide {
+  &.modal-hide {
     display: none;
   }
 }
 .modal-success {
   margin-bottom: 2rem;
 
-  &.hide {
+  &.modal-hide {
     display: none;
   }
 }
 
 .close-contact-modal-container {
+  display: flex;
+  justify-content: flex-end;
   height: 5%;
-  margin-bottom: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.close-contact-modal {
+  all: unset;
+
+  svg {
+    margin-right: -10px;
+    outline: none;
+    transition: transform 0.15s linear;
+    fill: $midGrey;
+  }
+
+  &:hover {
+    all: unset;
+    cursor: pointer;
+    svg {
+      margin-right: -10px;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.instruction-form-label {
+  display: block;
+}
+
+.instruction-form-control {
+  width: 100%;
+}
+
+.teacher-control {
+  color: $midGrey;
 }
