@@ -67,9 +67,9 @@
       <p>Adapted from the Student Guidelines from the <a href="https://www.spiritual-integrity.org/guidelines/" target="_blank" rel="noopener noreferrer">Association for Spiritual Integrity</a>.</p>
       <ul>
         <li>It is important for students to acknowledge that teachers and students alike are human. Just like students, teachers also develop and grow, both personally and professionally.</li>
-        <li>Students should refrain from projecting ideas and emotions they may carry onto their teacher. Students are encouraged to be aware of and take responsibility for any aggrandizing perceptions that sometimes develop for a teacher.</li>
-        <li>Where appropriate, students and teachers are encouraged to approach their communication with an attitude of openness so that any misunderstandings and miscommunication can be worked out.</li>
-        <li>If ethical violations of any kind have occurred, please reach out to us using the form on our <a href="https://opensanghacollective.org/give-feedback/">feedback</a> page. Ethical grievances are not taboo topics and can and should be openly discussed.</li>
+        <li>Students should refrain from projecting ideas and emotions they may carry onto their teacher. Students are encouraged to be aware of and take responsibility for any aggrandizing perceptions of a teacher that can sometimes develop.</li>
+        <li>Where appropriate, students and teachers are encouraged to approach their communication with an attitude of openness so that any misunderstandings and miscommunication that arise can be worked out.</li>
+        <li>If misconduct of any kind occurs, students should reach out to us as soon as possible via our <a href="https://opensanghacollective.org/give-feedback/">feedback</a> page. Ethical grievances are not taboo topics and can and should be openly discussed.</li>
         <li>Students must not make sexual advances towards, or flirt with a teacher.</li>
       </ul>
 
