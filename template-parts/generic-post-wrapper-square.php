@@ -1,7 +1,9 @@
-<?php/*
-    articleId
-    text
-*/ ?>
+<?php
+/**
+ * articleId
+ *   text
+ */ 
+?>
 
 <div class="post-wrapper-hentry">
     <article id="post-<?php echo $args['articleId'] ?>" class="status-publish hentry">
